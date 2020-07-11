@@ -11,7 +11,7 @@ ProjectBacker.new(project, self)
 end
 
 def backed_projects
-    binding.pry
 ProjectBacker.all.select{|project| project.backer == self}
+binding.pry
 end
 end
