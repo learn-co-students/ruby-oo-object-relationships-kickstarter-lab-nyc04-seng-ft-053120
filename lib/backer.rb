@@ -1,3 +1,4 @@
+require 'pry'
 class Backer 
 
     attr_accessor :name
@@ -11,7 +12,9 @@ ProjectBacker.new(project, self)
 end
 
 def backed_projects
-ProjectBacker.all.select{|project| project.backer == self}
-binding.pry
+ x = ProjectBacker.all.select{|project| project.backer == self}   
+    x.map{|project| project.project}
 end
+
+
 end

@@ -10,4 +10,9 @@ def add_backer(backer)
 ProjectBacker.new(self, backer)
 end
 
+def backers 
+    x = ProjectBacker.all.select{|project| project.project == self}
+    x.map{|project| project.backer}
+
+end
 end
